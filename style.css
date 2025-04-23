@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    max-width: 131px;
+    width: 100%;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #146b3a;
+    color: #f5f5f5;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    min-height: 600px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    width: 50%;
+    background-color: #146b3a;
+    color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    line-height: 1.6;
+}
+
+.hero-image {
+    width: 50%;
+    background-image: url(./unsplash_Qdt8f7Tcle0.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+/* Search Section */
+.search-section {
+    padding: 30px 5%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin: 20px 5%;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+    font-size: clamp(16px, 2vw, 18px);
+    color: #333;
+    font-weight: 600;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.search-field {
+    flex: 1 1 200px;
+    min-width: 150px;
+}
+
+.search-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.dropdown-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.dropdown-select .arrow {
+    color: #999;
+    font-size: 10px;
+}
+
+.search-button, .reset-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    flex: 1 1 150px;
+}
+
+.search-button {
+    background-color: #146b3a;
+    color: white;
+}
+
+.reset-button {
+    background-color: #f0e6da;
+    color: #7d6e5d;
+}
+
+/* Results Section */
+.results-section {
+    padding: 20px 5% 40px;
+    background-color: white;
+    width: 100%;
+}
+
+.results-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.results-header h2 {
+    font-size: clamp(18px, 2.5vw, 22px);
+    color: #333;
+    margin-top: 20px;
+}
+
+.results-header h3 {
+    margin-bottom: 20px;
+    font-size: clamp(16px, 1vw, 20px);
+}
+
+.results-header p {
+    margin-bottom: 20px;
+}
+
+.results-note {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Doctors Grid */
+.doctors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.doctor-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 365px;
+    min-width: 360px;
+    margin-bottom: 20px;
+}
+
+.doctor-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.doctor-specialty {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.doctor-rating {
+    margin-top: 20px;
+    color: #ffc107;
+}
+
+.doctor-card button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    margin-top: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 150px;
+    font-size: 14px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pagination button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #146b3a;
+    color: white;
+    border: none;
+}
+
+.pagination button.arrow {
+    width: auto;
+    padding: 0 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 992px) {
+    .search-field {
+        flex: 1 1 180px;
+    }
+    
+    .doctor-card {
+        flex: 1 1 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+    
+    .auth-buttons {
+        order: 2;
+    }
+    
+    nav {
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+    
+    nav ul {
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 5px;
+    }
+    
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero-text, .hero-image {
+        width: 100%;
+    }
+    
+    .hero-text {
+        padding: 40px 5%;
+    }
+    
+    .hero-image {
+        height: 300px;
+    }
+    
+    .search-button, .reset-button {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 5%;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav {
+        display: none; /* Hide navigation on small screens by default */
+    }
+    
+    nav.active {
+        display: flex;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .auth-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .login-btn, .signup-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .search-field {
+        width: 100%;
+    }
+    
+    .doctor-card {
+        min-width: 100%;
+    }
+    
+    .pagination button {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+}
